@@ -4,13 +4,11 @@ import { TbMoustache } from 'react-icons/tb'
 import { BsInstagram, BsWhatsapp } from 'react-icons/bs'
 
 import Button from './components/Button'
+import ImagePoster from './components/ImagePoster'
 import Footer from './components/Footer'
 
-import poster1 from './assets/postes/poster-1.jpg'
-import poster2 from './assets/postes/poster-2.jpg'
-import poster3 from './assets/postes/poster-3.jpg'
-import poster4 from './assets/postes/poster-4.jpg'
-import poster5 from './assets/postes/poster-5.jpg'
+import { posters } from './services/path.js'
+const [poster1, poster2, poster3, poster4, poster5] = posters
 
 import { apiInstagram } from './services/api'
 import { useQuery } from 'react-query'
@@ -82,40 +80,20 @@ function App() {
 						atendimento.
 					</p>
 					<div className="grid h-auto w-full max-w-4xl grid-cols-3 grid-rows-2 gap-1 rounded bg-zinc-800 p-2">
-						<div className="row-span-2 bg-blue-500">
-							<img
-								src={poster1}
-								alt="poster"
-								className="h-full w-full object-cover object-right"
-							/>
+						<div className="row-span-2">
+							<ImagePoster img={poster1} />
 						</div>
-						<div className="bg-blue-500">
-							<img
-								src={poster2}
-								alt="poster"
-								className="h-full w-full object-cover object-center"
-							/>
+						<div>
+							<ImagePoster img={poster2} />
 						</div>
-						<div className="bg-blue-500">
-							<img
-								src={poster3}
-								alt="poster"
-								className="h-full w-full object-cover object-center"
-							/>
+						<div>
+							<ImagePoster img={poster3} />
 						</div>
-						<div className="bg-blue-500">
-							<img
-								src={poster4}
-								alt="poster"
-								className="h-full w-full object-cover object-center"
-							/>
+						<div>
+							<ImagePoster img={poster4} />
 						</div>
-						<div className="bg-blue-500">
-							<img
-								src={poster5}
-								alt="poster"
-								className="h-full w-full object-cover object-center"
-							/>
+						<div>
+							<ImagePoster img={poster5} />
 						</div>
 					</div>
 				</section>
