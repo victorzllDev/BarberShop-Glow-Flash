@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { GiRazor } from 'react-icons/gi'
 import { AiFillHeart } from 'react-icons/ai'
 import { TbMoustache } from 'react-icons/tb'
@@ -14,28 +13,29 @@ import poster4 from './assets/postes/poster-4.jpg'
 import poster5 from './assets/postes/poster-5.jpg'
 
 import { apiInstagram } from './services/api'
+import { useQuery } from 'react-query'
+
+import {
+	urlInstagram,
+	urlWhatsapp,
+	urlGoogleMaps,
+	urlRotaGoogleMaps,
+} from './services/urls.js'
 
 function App() {
-	const [postesInstagram, setPostesInstagram] = useState([])
-	const urlInstagram = 'https://www.instagram.com/donbarbone/'
-	const urlWhatsapp =
-		'https://api.whatsapp.com/send?phone=5538999033144&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio.'
-	const urlGoogleMaps =
-		'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.757885474843!2d-43.8777979!3d-16.7389281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab5368941a2eaf%3A0x33200e014599e5db!2sDon%20Barbone%20-%20Barber%20Shop%20%26%20Bar!5e0!3m2!1sen!2sbr!4v1692414002621!5m2!1sen!2sbr'
-	const urlRotaGoogleMaps =
-		'https://www.google.com/maps/dir//Don+Barbone+-+Barbearia+%26+Bar/data=!4m8!4m7!1m0!1m5!1m1!1s0xab5368941a2eaf:0x33200e014599e5db!2m2!1d-43.8777979!2d-16.7389281'
-
-	useEffect(() => {
-		async function getPostesInstagram() {
+	const { data } = useQuery(
+		'postesInstagram',
+		async () => {
 			const res = await apiInstagram.get()
 			const data = await res.data.data
 			const dataImgs = await data.filter((img) => img.media_type === 'IMAGE')
 			const dataThreeimgs = await dataImgs.slice(0, 3)
-			setPostesInstagram(dataThreeimgs)
-		}
-
-		getPostesInstagram()
-	}, [])
+			return dataThreeimgs
+		},
+		{
+			staleTime: 1000 * 60, //1 min
+		},
+	)
 
 	return (
 		<>
@@ -123,7 +123,7 @@ function App() {
 				<section className="px-7 py-3">
 					<h2 className="mb-6 text-center text-4xl font-light">Galeria</h2>
 					<div className="flex flex-wrap items-center justify-center gap-4">
-						{postesInstagram.map((infoPoster) => {
+						{data?.map((infoPoster) => {
 							return (
 								<div
 									key={infoPoster.id}
