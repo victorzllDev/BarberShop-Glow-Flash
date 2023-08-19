@@ -5,7 +5,7 @@ function ImagePoster({ img }) {
 		<img
 			src={img}
 			alt="Image Poster"
-			className="h-full w-full object-cover object-center"
+			className="h-full w-full rounded object-cover object-center"
 		/>
 	)
 }

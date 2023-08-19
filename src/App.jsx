@@ -105,15 +105,11 @@ function App() {
 							return (
 								<div
 									key={infoPoster.id}
-									className="flex flex-col gap-3 rounded-md bg-zinc-800 p-3 "
+									className="flex h-auto w-full max-w-[16rem] flex-col gap-3 rounded-md bg-zinc-800 p-3 "
 								>
-									<img
-										src={infoPoster.media_url}
-										alt="Poster"
-										className="h-auto max-h-64 w-64 rounded object-cover object-center"
-									/>
+									<ImagePoster img={infoPoster.media_url} />
 									<div className="flex items-center justify-between">
-										<span className="w-40 overflow-hidden text-ellipsis whitespace-nowrap">
+										<span className="w-3/5 overflow-hidden text-ellipsis whitespace-nowrap">
 											{infoPoster.caption}
 										</span>
 										<AiFillHeart className="text-2xl text-zinc-50" />
