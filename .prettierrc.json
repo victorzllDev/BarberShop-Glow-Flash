@@ -1,33 +1,10 @@
 {
-	"tabWidth": 2,
-	"useTabs": true,
 	"semi": false,
 	"singleQuote": true,
 	"trailingComma": "all",
-	"arrowParens": "always",
-	"bracketSpacing": true,
-	"jsxBracketSameLine": false,
 	"jsxSingleQuote": false,
-	"quoteProps": "as-needed",
-	"endOfLine": "lf",
-	"proseWrap": "always",
-	"htmlWhitespaceSensitivity": "ignore",
-	"vueIndentScriptAndStyle": false,
-	"embeddedLanguageFormatting": "auto",
-	"overrides": [
-		{
-			"files": "*.md",
-			"options": {
-				"parser": "markdown"
-			}
-		},
-		{
-			"files": "*.json",
-			"options": {
-				"parser": "json"
-			}
-		}
-	],
+	"printWidth": 80,
+	"arrowParens": "always",
 	"plugins": ["prettier-plugin-tailwindcss"],
 	"tailwindcss": {}
 }
