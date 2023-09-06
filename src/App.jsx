@@ -53,7 +53,7 @@ function App() {
 					</div>
 					<div className="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full bg-gradient-radial from-transparent to-black" />
 					<h1 className="text-start text-3xl font-light sm:text-center sm:text-4xl md:text-6xl">
-						Bem-vindo à Barbearia Don Barbone!
+						Bem-vindo à BarberShop Glow Flash!
 					</h1>
 					<p className="mb-12 text-start text-sm font-light sm:text-center md:text-lg">
 						onde o estilo encontra a autenticidade. Cuidado excepcional para
@@ -137,7 +137,7 @@ function App() {
 							</Button>
 
 							<ul className="font-light">
-								<li>(38)99903-3144</li>
+								<li>(38)98856-8532</li>
 							</ul>
 						</div>
 						<div className="flex flex-1 flex-col items-start justify-start gap-2">
@@ -146,8 +146,8 @@ function App() {
 								Ver Rotas
 							</Button>
 							<p className="max-w-sm font-light">
-								Rua Raul Corrêa, 766 - Funcionários Montes Claros - MG 39401-029
-								Brasil
+								Montes Claros Shopping, Avenida Donato Quintino, Bairro, 90 -
+								Cidade Nova, Montes Claros - MG, 39400-546
 							</p>
 						</div>
 						<div className="flex flex-1 flex-col items-start justify-start gap-2">
