@@ -1,12 +1,14 @@
 {
-	"name": "donbarbone-barbearia",
+	"name": "barbershop",
 	"private": true,
-	"version": "0.0.0",
+	"version": "1.0.0",
+	"author": "João Victor",
+	"homepage": "https://github.com/victorzllDev/BarberShop",
+	"license": "MIT",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview"
 	},
 	"dependencies": {
