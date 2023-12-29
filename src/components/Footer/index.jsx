@@ -5,12 +5,12 @@ function Footer() {
 				&copy; 2023 BarberShop Glow Flash. Todos os direitos reservados. |
 				Desenvolvido por{' '}
 				<a
-					href="https://instagram.com/landing_flash"
+					href="https://github.com/victorzllDev/"
 					target="_blank"
 					rel="noreferrer"
 					className="inline-flex items-center justify-center gap-1"
 				>
-					Landing flash
+					VictorzllDev
 				</a>
 			</p>
 		</footer>

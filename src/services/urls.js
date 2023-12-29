@@ -1,4 +1,4 @@
-export const urlInstagram = 'https://www.instagram.com/landing_flash/'
+export const urlInstagram = 'https://www.instagram.com/_victorzll_/'
 export const urlWhatsapp =
 	'https://api.whatsapp.com/send?phone=5538988568532&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio.'
 export const urlGoogleMaps =
