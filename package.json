@@ -1,9 +1,9 @@
 {
-	"name": "barbershop",
+	"name": "barbershop-glow-flash",
 	"private": true,
 	"version": "1.0.0",
 	"author": "João Victor",
-	"homepage": "https://github.com/victorzllDev/BarberShop",
+	"homepage": "https://github.com/victorzllDev/BarberShop-Glow-Flash",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
